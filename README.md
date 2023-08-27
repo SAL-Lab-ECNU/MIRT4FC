@@ -4,14 +4,14 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of FCiStEM is to fit Two-Parameter Logistic Item Response Theory(2PL-IRT) models in R by iStEM alogrithm. Functionality for extracting results, making predictions, and simulating data is provided as well. 
+The goal of MIRT4FC is to fit Two-Parameter Logistic Item Response Theory(2PL-IRT) models in R by iStEM alogrithm. Functionality for extracting results, making predictions, and simulating data is provided as well. 
 
 ## Installation
 
-You can install the development version of FCiStEM like so:
+You can install the development version of MIRT4FC like so:
 
 ``` r
-library(FCiStEM)
+library(MIRT4FC)
 ```
 
 ## Example
@@ -19,7 +19,7 @@ library(FCiStEM)
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-library(FCiStEM)
+library(MIRT4FC)
 D <- 6
 nitem.per.dim <- 10
 nblock <- D * nitem.per.dim / 3
