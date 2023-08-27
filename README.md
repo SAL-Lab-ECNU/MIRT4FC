@@ -1,5 +1,5 @@
 
-# FCiStEM
+# MIRT4FC
 
 <!-- badges: start -->
 <!-- badges: end -->
