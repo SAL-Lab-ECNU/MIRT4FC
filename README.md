@@ -11,6 +11,9 @@ The goal of MIRT4FC is to fit Two-Parameter Logistic Item Response Theory(2PL-IR
 You can install the development version of MIRT4FC like so:
 
 ``` r
+install.packages("devtools")
+library("devtools")
+install_github("xpy-ECNU/MIRT4FC")
 library(MIRT4FC)
 ```
 
