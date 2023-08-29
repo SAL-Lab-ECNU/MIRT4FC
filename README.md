@@ -6,6 +6,11 @@
 
 The goal of MIRT4FC is to fit Two-Parameter Logistic Item Response Theory(2PL-IRT) models in R by iStEM alogrithm. Functionality for extracting results, making predictions, and simulating data is provided as well. 
 
+## Reference manual
+
+
+You can install the MIRT4FC.pdf
+
 ## Installation
 
 You can install the development version of MIRT4FC like so:
@@ -16,7 +21,6 @@ library("devtools")
 install_github("xpy-ECNU/MIRT4FC")
 library(MIRT4FC)
 ```
-
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
