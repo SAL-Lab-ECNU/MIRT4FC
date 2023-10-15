@@ -19,11 +19,12 @@ The development version of MIRT4FC can be installed in the following way:
 install.packages("devtools")
 library("devtools")
 install_github("xpy-ECNU/MIRT4FC")
+1
 library(MIRT4FC)
 ```
 ## Example
 
-This is a simple illustration that demonstrates how to resolve a typical issue:
+This is a simple example that demonstrates the entire process of simulating the latent trait parameters of 1000 participants in 6 dimensions, each with 10 statements and 20 triplet blocks, generating a response matrix, and finally estimating project parameters:
 
 ``` r
 ##########################a toy example based on the MUPP-2PL model################
