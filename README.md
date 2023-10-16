@@ -51,8 +51,10 @@ v <- matrix (0.5, D, D)                   	# Intertrait correlation
 diag (v) <- 1
 # Simulate latent trait parameter truth value
 theta <- mvnfast::rmvn (N, seq(-1, 1, length.out = D),sigma = v)
+
 ######## Generate a simulated dataset
 Y <- data.sim (item.par, theta, BID, blocksize = 3, res = 'rank')
+
 ######## Item parameter estimation
 fit <- StEM (Y, BID, maxitr = 100, blocksize = 3, res = 'rank', fix.sigma = TRUE, cores = 1)
 
