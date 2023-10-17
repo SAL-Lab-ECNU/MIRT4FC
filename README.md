@@ -24,7 +24,7 @@ library(MIRT4FC)
 ```
 ## Example
 
-This is a simple example that demonstrates the entire process of simulating the latent trait parameters of 1000 participants in 6 dimensions, each with 10 statements and 20 triplet blocks, generating a response matrix, and finally estimating project parameters:
+This is a simple example that demonstrates the entire process of simulating the latent trait parameters of 1000 participants in 6 dimensions, each with 10 statements and 20 triplet blocks, generating a response matrix, and finally estimating item parameters:
 
 ``` r
 #################Example1: A simulation example based on the MUPP-2PL model###############
