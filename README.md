@@ -66,8 +66,8 @@ This is a empirical example for the paper "A 2PLM-RANK Multidimensional Forced-c
 #########################an empirical example for the 2PL-RANK model######################
 ######## Read dataset
 library (MIRT4FC)
-Y <- data("MAP_data")
-BID <- data.frame(
+Y <- data("MAP_data")                  # Dataset
+BID <- data.frame(                     # Block-item-demension correspondence table
   Block = rep(1:88,each=3),
   Item = rep(1:3,times=88),
   Dim = c(11,	1,	14,	15,	13,	18,	6,	2,	7,	1,	21,	24,	23,	9, 22,	5,	3,	8,	6,	18,	20,	9,	7,	5,	19,	1,	9,	14,	 22,	10,	23,	21,	8,	3,	20,	10,	22,	3,	17,	4,	23,	24,
