@@ -61,7 +61,7 @@ fit <- StEM (Y, BID, maxitr = 100, blocksize = 3, res = 'rank', fix.sigma = TRUE
 
 ## Example2
 
-This is a empirical example for the paper "A 2PLM-RANK Multidimensional Forced-choice Model and its Fast Estimation":
+This is an empirical example for the paper "A 2PLM-RANK Multidimensional Forced-choice Model and its Fast Estimation":
 ``` r
 #########################an empirical example for the 2PL-RANK model######################
 ######## Read dataset
