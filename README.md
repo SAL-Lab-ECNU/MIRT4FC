@@ -57,6 +57,7 @@ Y <- data.sim (item.par, theta, BID, blocksize = 3, res = 'rank')
 
 ######## Item parameter estimation
 fit <- StEM (Y, BID, maxitr = 100, blocksize = 3, res = 'rank', fix.sigma = TRUE, cores = 1)
+print(fit)
 ```
 
 ## Example2
@@ -78,6 +79,6 @@ BID <- data.frame(                     # Block-item-demension correspondence tab
            2,	11,	23,	19,	19,	13,	17,	6,	20,	24,	9,	17,	5,	20,	12,	6,  19,	18,	16,	15,	21,	7,	5,	1,	18,	2,	4,	14,	1,	13,	12,	 16,	12,	2,	20,	4,	5,	10,	4,	1,	21,	14,	3))
 ######## Item parameter estimation
 fit <- StEM (Y, BID, maxitr = 150, blocksize = 3, res = 'rank', fix.sigma = TRUE, cores = 1)
-
+print(fit)
 ```
 
