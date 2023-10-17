@@ -18,7 +18,7 @@ The development version of MIRT4FC can be installed in the following way:
 ``` r
 install.packages("devtools")
 library("devtools")
-install_github("xpy-ECNU/MIRT4FC")
+install_github("SAL-Lab-ECNU/MIRT4FC")
 1
 library(MIRT4FC)
 ```
