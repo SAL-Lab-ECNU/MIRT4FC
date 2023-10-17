@@ -59,7 +59,7 @@ Y <- data.sim (item.par, theta, BID, blocksize = 3, res = 'rank')
 fit <- StEM (Y, BID, maxitr = 100, blocksize = 3, res = 'rank', fix.sigma = TRUE, cores = 1)
 
 ##################Example2:an empirical example for the 2PL-RANK model####################
-##for the paper ***A 2PLM-RANK Multidimensional Forced-choice Model*** and its Fast Estimation##
+#for the paper "A 2PLM-RANK Multidimensional Forced-choice Model" and its Fast Estimation#
 ##########################################################################################
 ######## Read dataset
 library (MIRT4FC)
