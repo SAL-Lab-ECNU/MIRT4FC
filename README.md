@@ -22,7 +22,7 @@ install_github("SAL-Lab-ECNU/MIRT4FC")
 1
 library(MIRT4FC)
 ```
-## Example
+## Example1
 
 This is a simple example that demonstrates the entire process of simulating the latent trait parameters of 1000 participants in 6 dimensions, each with 10 statements and 20 triplet blocks, generating a response matrix, and finally estimating item parameters:
 
@@ -59,10 +59,11 @@ Y <- data.sim (item.par, theta, BID, blocksize = 3, res = 'rank')
 fit <- StEM (Y, BID, maxitr = 100, blocksize = 3, res = 'rank', fix.sigma = TRUE, cores = 1)
 ```
 
+## Example2
+
+This is a empirical example for the paper "A 2PLM-RANK Multidimensional Forced-choice Model and its Fast Estimation":
 ``` r
 #########################an empirical example for the 2PL-RANK model######################
-#for the paper "A 2PLM-RANK Multidimensional Forced-choice Model and its Fast Estimation"#
-##########################################################################################
 ######## Read dataset
 library (MIRT4FC)
 Y <- data("MAP_data")
