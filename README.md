@@ -27,7 +27,7 @@ library(MIRT4FC)
 This is a simple example that demonstrates the entire process of simulating the latent trait parameters of 1000 participants in 6 dimensions, each with 10 statements and 20 triplet blocks, generating a response matrix, and finally estimating project parameters:
 
 ``` r
-##########################a toy example based on the MUPP-2PL model################
+#################Example1: A simulation example based on the MUPP-2PL model###############
 ########Set simulation information
 library (MIRT4FC)
 D <- 6                           	# Dimension
@@ -57,6 +57,15 @@ Y <- data.sim (item.par, theta, BID, blocksize = 3, res = 'rank')
 
 ######## Item parameter estimation
 fit <- StEM (Y, BID, maxitr = 100, blocksize = 3, res = 'rank', fix.sigma = TRUE, cores = 1)
+
+##################Example2:an empirical example for the 2PL-RANK model####################
+##for the paper ***A 2PLM-RANK Multidimensional Forced-choice Model*** and its Fast Estimation##
+##########################################################################################
+######## Read dataset
+library (MIRT4FC)
+Y <- data("MAP_data")
+######## Item parameter estimation
+fit <- StEM (Y, BID, maxitr = 150, blocksize = 3, res = 'rank', fix.sigma = TRUE, cores = 1)
 
 ```
 
