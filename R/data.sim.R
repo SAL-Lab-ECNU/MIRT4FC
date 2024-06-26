@@ -1,13 +1,14 @@
 #' Data.sim
 #'
 #' @param item.par   A data frame; parameters for a and d.
-#' @param theta      A # of subjects x # of dimensions matrix; theta parameters.
-#' @param BID        A # of statements x 3 matrix; item information,
+#' @param theta      A # of subjects * # of dimensions matrix; theta parameters.
+#' @param BID        A # of statements * 3 matrix; item information,
 #'     columns are "Block", "Item" and "Dimensions".
 #' @param blocksize  A number; block size of FC(2/3/4).
-#' @param res        A string; response format('pick'/'rank'/'mole').
+#' @param res        A string; response format('pick'/'rank'/'mole'),
+#'     pick-2(blocksize=2)/rank-2/mole-2 are equivalent, rank-3/mole-3 are equivalent.
 #'
-#' @return      A # of subjects x # of block number matrix.
+#' @return      A # of subjects * # of block number matrix.
 #' @export data.sim
 #' @examples
 #' D <- 6
@@ -31,22 +32,15 @@
 #' Y <- data.sim(item.par,theta,BID,blocksize=3,res='rank')
 #'
 
-data.sim <- function(item.par=item.par,theta=theta,BID=BID,blocksize=3,res='rank'){
-  if(blocksize==2){
-    Y <- data.sim_2(item.par=item.par,theta=theta,BID=BID)
-  }else if(blocksize==3){
-    if(res=='pick'){
-      Y <- data.sim_3_pick(item.par=item.par,theta=theta,BID=BID)
-    }else if(res=='rank'|res=='mole'){
-      Y <- data.sim_3_rank(item.par=item.par,theta=theta,BID=BID)
-    }
-  }else if(blocksize==4){
-    if(res=='pick'){
-      Y <- data.sim_4_pick(item.par=item.par,theta=theta,BID=BID)
-    }else if(res=='rank'){
-      Y <- data.sim_4_rank(item.par=item.par,theta=theta,BID=BID)
-    }else if(res=='mole'){
-      Y <- data.sim_4_mole(item.par=item.par,theta=theta,BID=BID)
-    }
+data.sim <- function(item.par=item.par,theta=theta,BID=BID,blocksize=3,res='rank',model='2PL'){
+  if(model=='2PL'){
+    Y <- data.sim_2PL(item.par=item.par,theta=theta,BID=BID,blocksize=blocksize,res=res)
+  }else if(model=='TIRT'){
+    Y <- data.sim_TIRT(item.par=item.par,theta=theta,BID=BID,blocksize=blocksize,res=res)
+  }else if(model=='ZG'){
+    Y <- data.sim_ZG(item.par=item.par,theta=theta,BID=BID,blocksize=blocksize,res=res)
+  }else if(model=='GGUM'){
+    Y <- data.sim_GGUM(item.par=item.par,theta=theta,BID=BID,blocksize=blocksize,res=res)
   }
+  return(Y)
 }

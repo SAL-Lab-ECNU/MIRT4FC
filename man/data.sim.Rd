@@ -9,15 +9,16 @@ data.sim(
   theta = theta,
   BID = BID,
   blocksize = 3,
-  res = "rank"
+  res = "rank",
+  model = "2PL"
 )
 }
 \arguments{
 \item{item.par}{A data frame; parameters for a and d.}
 
-\item{theta}{A # of subjects x # of dimensions matrix; theta parameters.}
+\item{theta}{A # of subjects * # of dimensions matrix; theta parameters.}
 
-\item{BID}{A # of statements x 3 matrix; item information,
+\item{BID}{A # of statements * 3 matrix; item information,
 columns are "Block", "Item" and "Dimensions".}
 
 \item{blocksize}{A number; block size of FC(2/3/4).}
@@ -26,7 +27,7 @@ columns are "Block", "Item" and "Dimensions".}
 pick-2(blocksize=2)/rank-2/mole-2 are equivalent, rank-3/mole-3 are equivalent.}
 }
 \value{
-A # of subjects x # of block number matrix.
+A # of subjects * # of block number matrix.
 }
 \description{
 Data.sim
