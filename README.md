@@ -49,7 +49,7 @@ N <- 1000                          	# Sample number
 v <- matrix (0.5, D, D)                   	# Intertrait correlation
 diag (v) <- 1
 # Simulate latent trait parameter truth value
-theta <- mvnfast::rmvn (N, seq(-1, 1, length.out = D),sigma = v)
+theta <- mvnfast::rmvn (N, seq(0, length.out = D),sigma = v)
 
 ######## Generate a simulated dataset
 Y <- data.sim (item.par, theta, BID, blocksize = 3, res = 'rank')
