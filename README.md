@@ -3,7 +3,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The objective of MIRT4FC is to efficiently implement various forced-choice models using the istem algorithm.Currently, it includes Thurstone's Item Response Theory (TIRT, Brown et al., 2011) Model, Multi-Unidimensional Pairwise Preference Two Parameter Logistic Model (MUPP-2PLM, Morillo et al., 2016), Multi-Unidimensional Pairwise Preference Generalized Graded Unfolding Model (MUPP-GGUM ,Stark et al., 2005) and Generalized Graded Unfolding-RANK Model (GGUM-RANK, Lee et al., 2018), and we plan to continue updating and adding new models in the future. In addition to item parameter estimation capabilities, our R package also offers the ability to estimate ability parameters using MAP, EAP, and MLE methods. It can generate simulated response matrices, calculate standard errors (SE) for both ability and item parameters, and include a set of empirical data.
+The objective of MIRT4FC is to efficiently implement various forced-choice models using the istem algorithm.Currently, it includes Multi-Unidimensional Pairwise Preference Two Parameter Logistic Model (MUPP-2PLM, Morillo et al., 2016), Multi-Unidimensional Pairwise Preference Generalized Graded Unfolding Model (MUPP-GGUM ,Stark et al., 2005) and so on. We plan to continue updating and adding new models in the future. In addition to item parameter estimation capabilities, our R package also offers the ability to estimate ability parameters using MAP, EAP, and MLE methods. It can generate simulated response matrices, calculate standard errors (SE) for both ability and item parameters, and include a set of empirical data.
 
 ## Reference manual
 
@@ -55,7 +55,7 @@ theta <- mvnfast::rmvn (N, seq(-1, 1, length.out = D),sigma = v)
 Y <- data.sim (item.par, theta, BID, blocksize = 3, res = 'rank')
 
 ######## Item parameter estimation
-fit <- iStEM (Y, BID, maxitr = 100, blocksize = 3, res = 'rank', fix.sigma = TRUE, cores = 1)
+fit <- iStEM (Y, BID, maxitr = 100, blocksize = 3, res = 'rank', fix.sigma = TRUE)
 print(fit)
 ```
 
