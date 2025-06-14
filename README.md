@@ -10,6 +10,14 @@ The objective of MIRT4FC is to efficiently implement various forced-choice model
 
 Reference manual can be found in MIRT4FC.pdf
 
+## Version
+
+0.1.0 2023.10.15
+The initial version includes the project parameter estimation function of the 2pl model, simulation data generation function, capability parameter estimation function, and an empirical data.
+
+0.1.1 2025.06.14
+This version has added the SE estimation function for project parameters
+
 ## Installation
 
 The development version of MIRT4FC can be installed in the following way:
