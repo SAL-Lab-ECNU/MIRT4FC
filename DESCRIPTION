@@ -1,0 +1,38 @@
+Package: MIRT4FC
+Type: Package
+Title: Fit FC-Model by iStEM Alogrithm
+Version: 0.1.1
+Authors@R: c(person("PeiYi", "Xu", 
+                    email = "xupy.ecnu@foxmail.com",
+                    role = c("aut", "cre")),
+             person("ChanJin", "Zheng",
+                    role = "aut"))
+Maintainer: PeiYi Xu <xupy.ecnu@foxmail.com>
+Description: The objective of MIRT4FC is to efficiently implement various 
+    forced-choice models using the istem algorithm.Currently, it includes 
+    Thurstone's Item Response Theory (TIRT, Brown et al., 2011) Model, 
+    Multi-Unidimensional Pairwise Preference Two Parameter Logistic Model 
+    (MUPP-2PLM, Morillo et al., 2016) and we plan to continue updating and 
+    adding new models in the future. 
+    In addition to item parameter estimation capabilities, our R package also 
+    offers the ability to estimate ability parameters using MAP, EAP, and MLE 
+    methods. It can generate simulated response matrices, calculate standard 
+    errors (SE) for both ability and item parameters, and include a set of 
+    empirical data.
+License: GPL (>= 3)
+Encoding: UTF-8
+Data:
+  inst/data/MAP_data.rda
+LazyData: true
+ByteCompile: true
+RoxygenNote: 7.2.3
+Imports:
+	armspp,	doParallel,	foreach,	coda,	stats,	utils, lvmcomp,
+	Matrix
+Depends:
+  R (>= 3.5.0), Rcpp (>= 0.12.16),  parallel, methods,	mvnfast,	nloptr
+Suggests: 
+  roxygen2
+SystemRequirements: GNU make
+NeedsCompilation: yes
+
