@@ -1,7 +1,7 @@
 Package: MIRT4FC
 Type: Package
 Title: Fit FC-Model by iStEM Alogrithm
-Version: 0.1.1
+Version: 1.0.0
 Authors@R: c(person("PeiYi", "Xu", 
                     email = "xupy.ecnu@foxmail.com",
                     role = c("aut", "cre")),
