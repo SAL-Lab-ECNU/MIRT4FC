@@ -63,7 +63,7 @@
 #' @importFrom Matrix forceSymmetric
 #' @importFrom parallel detectCores makeCluster stopCluster
 iStEM <- function(Y,BID,positive=rep(TRUE,nrow(BID)),blocksize=3,res='rank',M=10,B=20,model='2PL',
-                  SE=NULL,sigma=NULL,theta=NULL,fix.sigma = FALSE,burnin.maxitr=40,
+                  SE='Louis',sigma=NULL,theta=NULL,fix.sigma = FALSE,burnin.maxitr=40,
                  maxitr=500,eps1=1.5,eps2=0.4,frac1=.2,frac2=.5,cores=NULL,h=NULL){
   if(model=='2PL'){
     x <- iStEM_2PL(Y=Y,BID=BID,positive=positive,M=M,B=B,SE=SE,blocksize=blocksize,res=res,
